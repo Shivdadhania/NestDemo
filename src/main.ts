@@ -17,6 +17,7 @@ async function bootstrap() {
     app.useGlobalPipes(new ValidationPipe());
     app.useGlobalFilters(new AllExceptionsFilter());
     // app.useGlobalInterceptors(new TransformInterceptor);
+    console.log(process.env.PORT, "PORT");
     await app.listen(process.env.PORT);
 }
 bootstrap();
